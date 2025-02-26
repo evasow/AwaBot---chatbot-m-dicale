@@ -48,8 +48,8 @@ const MessageInput: React.FC<MessageInputProps> = ({
         <IconButton
           type="submit" // Soumettre le formulaire au clic
           sx={{
-            backgroundColor: "#6a11cb",
-            color: "#fff",
+            //backgroundColor: "#6a11cb",
+            color: "#6a11cb",
             "&:hover": {
               backgroundColor: "#2575fc",
             },
