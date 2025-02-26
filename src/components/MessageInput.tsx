@@ -24,7 +24,7 @@ const MessageInput: React.FC<MessageInputProps> = ({
       sx={{
         display: "flex",
         padding: 2,
-        backgroundColor: "#fff",
+        backgroundColor: "#f7f9fc",
        // borderTop: "1px solid #e3e6f0",
       }}
     >
@@ -41,7 +41,7 @@ const MessageInput: React.FC<MessageInputProps> = ({
             borderRadius: "20px",
             "& .MuiOutlinedInput-root": {
               borderRadius: "20px",
-              backgroundColor: "#f7f9fc",
+              backgroundColor: "#fff",
             },
           }}
         />

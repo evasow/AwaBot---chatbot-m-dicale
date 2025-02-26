@@ -13,6 +13,7 @@ interface Message {
 }
 
 function App() {
+  
   const [messages, setMessages] = useState<Message[]>([
     {
       message: "Bonjour, je suis AwaBot ! Pose-moi des questions médicales. 😊",
