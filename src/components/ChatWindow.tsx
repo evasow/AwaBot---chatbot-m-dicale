@@ -43,7 +43,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ messages, isTyping }) => {
             <Box
               sx={{
                 maxWidth: "75%",
-                backgroundColor: msg.sender === "user" ? "#6a11cb" : "#e6d5f7",
+                backgroundColor: msg.sender === "user" ? "#842de0" : "#e6d5f7",
                 borderBottomRightRadius: msg.sender === "user" ? "none" : "18px",
                 borderRadius: "18px",
                 padding: "12px 16px",
@@ -65,11 +65,14 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ messages, isTyping }) => {
         ))}
         {isTyping && (
           <ListItem sx={{ justifyContent: "flex-start" }}>
+             {<Avatar sx={{ bgcolor: "#6a11cb", mr: 1 }}>
+            <span className="material-symbols-outlined">smart_toy</span>
+              </Avatar>}
             <Box
               sx={{
                 maxWidth: "75%",
                 display: "flex",
-                backgroundColor: "#e9f5e9",
+                backgroundColor: "#e6d5f7",
                 borderRadius: "18px",
                 padding: "12px 16px",
                 alignItems: "center",
@@ -77,10 +80,10 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ messages, isTyping }) => {
               }}
             >
               <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1.2, ease: "linear" }}>
-                <MoreHorizIcon sx={{ fontSize: 24, color: "grey" }} />
+                <MoreHorizIcon sx={{ fontSize: 30, color: "grey" }} />
               </motion.div>
               <Typography variant="body2" sx={{ ml: 1, color: "grey" }}>
-                AwaBot est en train d'écrire
+                {/* AwaBot est en train d'écrire */}
               </Typography>
             </Box>
           </ListItem>

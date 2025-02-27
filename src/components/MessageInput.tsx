@@ -30,10 +30,10 @@ const MessageInput: React.FC<MessageInputProps> = ({
           placeholder="Tapez un message..."
           sx={{
             borderRadius: "20px",
-          
             "& .MuiOutlinedInput-root": {
               borderRadius: "20px",
               backgroundColor: "#fff",
+              boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)"
             },
 
           }}
