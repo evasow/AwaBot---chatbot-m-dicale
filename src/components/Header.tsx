@@ -6,10 +6,11 @@ const Header: React.FC = () => {
     <AppBar 
       position="static"
       sx={{
-        background: "linear-gradient(90deg, #6a11cb 0%, #2575fc 100%)",
+        background: "linear-gradient(90deg, #6a11cb 0%, #e6d5f7 100%)",
         boxShadow: "none",
         marginBottom: "4px",
         borderRadius: "5px",
+        marginTop: "10px",
       }}
     >
       <Toolbar>

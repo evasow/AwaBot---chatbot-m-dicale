@@ -27,20 +27,24 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ messages, isTyping }) => {
         flex: 1,
         overflowY: "auto",
         padding: 2,
-        backgroundColor: "#f7f9fc",
+        backgroundColor: "white",
         borderRadius: "8px",
         maxHeight: "800px",
-        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+        // border: "1px solid #b8d0fa",
+        //boxShadow: "0 4px 10px rgb(171, 89, 252)",
       }}
     >
       <List>
         {messages.map((msg, index) => (
           <ListItem key={index} sx={{ justifyContent: msg.sender === "user" ? "flex-end" : "flex-start" }}>
-            {msg.sender === "ChatGPT" && <Avatar sx={{ bgcolor: "#4caf50", mr: 1 }}>🤖</Avatar>}
+            {msg.sender === "ChatGPT" && <Avatar sx={{ bgcolor: "#6a11cb", mr: 1 }}>
+            <span className="material-symbols-outlined">smart_toy</span>
+              </Avatar>}
             <Box
               sx={{
                 maxWidth: "75%",
-                backgroundColor: msg.sender === "user" ? "#2575fc" : "#b8d0fa",
+                backgroundColor: msg.sender === "user" ? "#6a11cb" : "#e6d5f7",
+                borderBottomRightRadius: msg.sender === "user" ? "none" : "18px",
                 borderRadius: "18px",
                 padding: "12px 16px",
                 wordBreak: "break-word",
@@ -56,7 +60,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ messages, isTyping }) => {
                 {msg.timestamp}
               </Typography>
             </Box>
-            {msg.sender === "user" && <Avatar sx={{ bgcolor: "#1e88e5", ml: 1 }}>👤</Avatar>}
+            {/* {msg.sender === "user" && <Avatar sx={{ bgcolor: "#1e88e5", ml: 1 }}>👤</Avatar>} */}
           </ListItem>
         ))}
         {isTyping && (

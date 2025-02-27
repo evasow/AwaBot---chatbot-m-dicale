@@ -150,7 +150,14 @@ function App() {
  
   return (
     <Box>
-      <Container maxWidth="xl" sx={{ mt: 4 }}>
+      <Container maxWidth="xl" 
+      sx={{ 
+        mt: 4, 
+        //backgroundColor: "red",
+        boxShadow:"1px 1px 1px 1px #6a11cb", 
+        borderRadius:"10px", 
+        display:"flex", 
+        flexDirection:"column"}}>
       <Header />
         <Box
           sx={{
