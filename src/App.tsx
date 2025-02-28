@@ -149,21 +149,31 @@ function App() {
   }
  
   return (
-    <Box>
-      <Container maxWidth="xl" 
+    <Box
+    sx={{
+      height:"90vh",
+      display:"flex", 
+      flexDirection:"column",
+      justifyContent:"center",
+      alignItems:"center",
+    }}
+    >
+      <Container maxWidth="lg" 
       sx={{ 
         mt: 4, 
         //backgroundColor: "red",
-        boxShadow:"1px 1px 1px 1px #6a11cb", 
+        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+        // boxShadow:"1px 1px 1px 1px #6a11cb", 
         borderRadius:"10px", 
-        display:"flex", 
-        flexDirection:"column"}}>
+      
+        }}>
       <Header />
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
-            height: "800px",
+            height: "auto",
+            maxHeight:"700px",
            // border: "1px solid #ccc",
             borderRadius: "8px",
             overflow: "hidden",
