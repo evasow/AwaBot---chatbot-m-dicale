@@ -41,7 +41,6 @@ function App() {
     const detectedIntent = detectIntent(inputMessage);
     if (detectedIntent) {
       console.log("Intent détecté :", detectedIntent);
-      // Tu peux ajuster la réponse en fonction de l'intent détecté, si nécessaire
     }
     await processMessageToChatGPT(newMessages);
   };
@@ -52,7 +51,6 @@ function App() {
       content: messageObject.message,
     }));
 
-     // Ajout de l'intent dans le message système
     const detectedIntent = detectIntent(chatMessages[chatMessages.length - 1].message);
     const systemMessage = detectedIntent ? {
       role: "system",
@@ -134,7 +132,7 @@ function App() {
     }
     }
     }
-    return null; // Aucun intent détecté
+    return null; 
     }
 
   function formatResponse(responseText: string): string {
