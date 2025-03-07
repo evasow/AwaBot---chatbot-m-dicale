@@ -9,7 +9,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 interface Message {
   message: string;
   sender: "user" | "ChatGPT";
-  timestamp: string; // Ajout pour la date et l'heure
+  timestamp: string;
 }
 
 function App() {
@@ -64,7 +64,7 @@ function App() {
     };
 
     const apiRequestBody = {
-      model: "deepseek-r1-distill-llama-70b", // Utilisez le modèle approprié
+      model: "deepseek-r1-distill-llama-70b", 
       messages: [systemMessage, ...apiMessages],
       temperature: 0.5,
     };
@@ -144,7 +144,7 @@ function App() {
     .replace(/\*\*(.*?)\*\*/g, "$1")
     .replace(/\\n\\n/g, "\n\n")
     .replace(/\\n/g, "\n")  
-    .replace(/(:\))/g, "😊") // Remplacement des smileys texte par des emojis
+    .replace(/(:\))/g, "😊") 
     
   }
  
